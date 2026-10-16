@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #041510;
+    color: #e2e8f0;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom scrollbar for deep forest theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #041510;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #14513f;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #10b981;
+  }
+}
+
+/* Glassmorphism and Card Styling */
+.eco-card {
+  background: linear-gradient(135deg, rgba(10, 48, 36, 0.7) 0%, rgba(6, 37, 27, 0.85) 100%);
+  border: 1px solid rgba(52, 211, 153, 0.14);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.eco-card-interactive {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.eco-card-interactive:hover {
+  border-color: rgba(52, 211, 153, 0.35);
+  box-shadow: 0 12px 35px -8px rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+}
+
+.eco-glow-border {
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  box-shadow: inset 0 0 15px rgba(16, 185, 129, 0.08);
+}

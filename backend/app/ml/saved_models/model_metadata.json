@@ -1,0 +1,57 @@
+{
+  "model_name": "GradientBoostingRegressor (Scikit-learn)",
+  "last_trained_at": "2026-10-05T03:43:36Z",
+  "metrics": {
+    "model_name": "GradientBoostingRegressor (Scikit-learn)",
+    "trained_at": "2026-10-05T03:43:36Z",
+    "training_samples": 2284,
+    "testing_samples": 571,
+    "total_samples": 2855,
+    "train_date_range": {
+      "start": "2026-09-03T06:00:00Z",
+      "end": "2026-09-27T01:00:00Z"
+    },
+    "test_date_range": {
+      "start": "2026-09-27T01:00:00Z",
+      "end": "2026-10-02T23:00:00Z"
+    },
+    "model_mae": 2.19,
+    "model_rmse": 3.01,
+    "model_r2": 0.9706,
+    "baseline_model": "24h Seasonal Lag",
+    "baseline_mae": 4.38,
+    "baseline_rmse": 5.82,
+    "mae_improvement_percent": 50.0,
+    "rmse_improvement_percent": 48.3,
+    "top_features": [
+      {
+        "feature": "pm25_lag_12",
+        "weight_percent": 88.4
+      },
+      {
+        "feature": "pm25_lag_1",
+        "weight_percent": 4.1
+      },
+      {
+        "feature": "pm25_roll_mean_6h",
+        "weight_percent": 2.7
+      },
+      {
+        "feature": "pm10_lag_1",
+        "weight_percent": 1.1
+      },
+      {
+        "feature": "pm25_roll_std_6h",
+        "weight_percent": 0.9
+      }
+    ],
+    "feature_count": 17
+  },
+  "limitations": [
+    "Assumes persistent local topological and micrometeorological station microclimates.",
+    "Unmodeled extreme weather fronts (e.g. violent dust storms, flash typhoons) may cause temporary forecast variance.",
+    "Prediction uncertainty intervals expand proportionally with time horizon (+0.04 variance factor per hour).",
+    "Periodic retraining recommended every 7-14 days to adapt to seasonal shifts."
+  ],
+  "is_trained": true
+}
